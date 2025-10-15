@@ -17,7 +17,8 @@ const {
   sphereImage,
   lighthouseImage,
   islandImage,
-  bannerImage
+  bannerImage,
+  jonathanImage,
 } = localData.images;
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gotothel.com";
@@ -31,9 +32,11 @@ export default function Template() {
       <main className="home-page">
         <HeroSection />
         <hr className="border-secondary" />
+        <AboutSection />
+        <hr className="border-secondary" />
         <BrandsSection />
         <hr className="border-secondary" />
-        <AboutSection />
+        <WhatWeDoSection />
         <hr className="border-secondary" />
         <Testimonials />
       </main>
@@ -188,6 +191,38 @@ const HeroSection = () => {
   );
 };
 
+const AboutSection = () => (
+  <section className="what-we-do bg-gray-50" id="about">
+    <div className="container ">
+      <div className="grid md:grid-cols-[2fr_1fr] gap-y-[20px] gap-x-[10%]">
+        <div className="col">
+          <div className="about-content max-w-[650px]">
+            <div className="flex  items-center justify-center md:justify-start gap-3 text-[1.2rem] md:text-[1.8rem] font-[300] mb-3">
+              {integrationsIcon}
+              About Thel
+            </div>
+            <h2 className="text-[1.5rem] max-w-[600px] text-center md:text-left font-semibold md:text-5xl mb-[1.3rem]">
+              A Modern Boutique Growth Agency
+            </h2>
+            <p className="text-center md:text-left text-gray-600 text-lg mb-[0.7rem]"> Thel is a boutique digital marketing consulting agency.</p> 
+            <p className="about-description font-medium text-[rgba(0,0,0,0.4)] text-center md:text-left">
+              Our founder, Jonathan, brings a hands-on approach that ensures every campaign, audit, and insight is executed with
+              care and expertise. Whether optimizing visibility through SEO, crafting resonant content, or building comprehensive
+              performance frameworks, Thel is your partner in digital excellence.
+            </p>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="what-we-do-image h-0 w-full pt-[110%] relative ">
+            <img src={jonathanImage} alt="Jonathan Poston" className="absolute top-0 left-0 w-full h-full object-cover rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const BrandsSection = () => {
   return (
     <section className="brands ">
@@ -252,13 +287,13 @@ const BrandsSection = () => {
   );
 };
 
-const AboutSection = () => (
-  <section className="About" id="about">
+const WhatWeDoSection = () => (
+  <section className="what-we-do" id="what-we-do">
     <div className="container ">
       <div className="about-content flex flex-col items-center">
         <div className="flex items-center gap-3 justify-end  text-[1.2rem] md:text-[1.8rem] font-[300] mb-3">
           {insightsIcon}
-          About
+          What We Do
         </div>
         <h2 className="text-[1.5rem] text-center font-semibold sm:text-5xl mb-[1.3rem]">
           Our Approach at <span className="text-orange">Thel LLC</span>{" "}
@@ -293,12 +328,16 @@ const Testimonials = () => {
               business's success and took pride in his work. He always shows up with good ideas, he is very communicative, and
               keeps track of things so I don't have to....
             </p>
-          <div className=" mb-2  text-center font-bold text-2xl text-[rgba(0,0,0,0.7)]">— Island Roots Charters</div>
+            <div className=" mb-2  text-center font-bold text-2xl text-[rgba(0,0,0,0.7)]">— Island Roots Charters</div>
             <div className="flex justify-end ">
               <div className="max-w-[80px] flex-1  fill-neutral-200 mb-2">{quoteRightIcon}</div>
             </div>
           </div>
-          <img className="max-w-[300px] mx-auto sm:absolute bottom-0  sm:translate-y-[50%] left-[50%] sm:translate-x-[-50%]" src={lighthouseImage} alt="" />
+          <img
+            className="max-w-[300px] mx-auto sm:absolute bottom-0  sm:translate-y-[50%] left-[50%] sm:translate-x-[-50%]"
+            src={lighthouseImage}
+            alt=""
+          />
         </div>
       </div>
     </section>

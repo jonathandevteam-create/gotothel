@@ -6,6 +6,7 @@ const images = {
   lighthouseImage: "/assets/images/rest/lighthouse.png",
   islandImage: "/assets/images/rest/island.webp",
   bannerImage: "/assets/images/rest/banner.webp",
+  jonathanImage: "/assets/images/rest/jonathan-poston.webp",
 
   // BRANDS
   mercedes: "/assets/images/icons/brands/Mercedes-Logo.svg",
