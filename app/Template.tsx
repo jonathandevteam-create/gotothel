@@ -206,12 +206,11 @@ const AboutSection = () => (
             </h2>
             <p className="text-center md:text-left text-gray-600 text-lg mb-[0.7rem]"> Thel is a boutique digital marketing consulting agency.</p> 
             <p className="about-description font-medium text-[rgba(0,0,0,0.4)] text-center md:text-left mb-[2rem]">
-              Our founder, Jonathan, brings a hands-on approach that ensures every campaign, audit, and insight is executed with
+              Our founder, Jonathan Poston, brings a hands-on approach that ensures every campaign, audit, and insight is executed with
               care and expertise. Whether optimizing visibility through SEO, crafting resonant content, or building comprehensive
               performance frameworks, Thel is your partner in digital excellence.
             </p>
 
-            <p className="italic text-right">Our founder, Jonathan Poston</p>
           </div>
         </div>
 
